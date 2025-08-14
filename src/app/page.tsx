@@ -1,22 +1,13 @@
 'use client';
 
 import Content from '@/app/_component/content';
-import { Button } from '@/components/ui/button';
-import { SignInButton, UserButton } from '@clerk/nextjs';
-import { Authenticated, Unauthenticated } from 'convex/react';
+import Navbar from '@/app/_component/navbar';
 
 export default function Home() {
   return (
-    <>
-      <Authenticated>
-        <UserButton />
-        <Content />
-      </Authenticated>
-      <Unauthenticated>
-        <SignInButton>
-          <Button>Sign in</Button>
-        </SignInButton>
-      </Unauthenticated>
-    </>
+    <section className="container mx-auto px-4 md:px-0">
+      <Navbar />
+      <Content />
+    </section>
   );
 }
