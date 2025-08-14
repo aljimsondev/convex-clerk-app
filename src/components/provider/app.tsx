@@ -2,14 +2,17 @@
 
 import { ConvexClientProvider } from '@/components/provider/convex-client-provider';
 import { PageProps } from '@/lib/types/common';
+import { ClerkProvider } from '@clerk/nextjs';
 import { Toaster } from 'sonner';
 
 function AppProvider({ children }: PageProps) {
   return (
-    <ConvexClientProvider>
-      {children}
-      <Toaster />
-    </ConvexClientProvider>
+    <ClerkProvider>
+      <ConvexClientProvider>
+        {children}
+        <Toaster />
+      </ConvexClientProvider>
+    </ClerkProvider>
   );
 }
 
