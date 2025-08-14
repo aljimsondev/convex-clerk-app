@@ -1,5 +1,8 @@
 ## Basic Subscription Next.js Template using Convex and Clerk
 
+
+[View Demo](https://convex-clerk-app-xi.vercel.app/)
+
 A minimal Next.js 15 application demonstrating authentication with Clerk, basic plan-gated UI ("pro" plan), and a Convex client setup. The app includes a protected page that checks the user's Clerk plan and shows a Pricing Table when access is not granted. Example content is fetched from public APIs for demo purposes.
 
 ### Tech stack
